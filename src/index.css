@@ -1,6 +1,5 @@
 .sidenav-ht{
     height: 100vh;
-    /*width: 280px;*/
 }
 .error-symbol {
     font-size: 18px;
@@ -19,4 +18,10 @@
 
 .close-icon {
     margin-right: 2%;
+}
+
+@media only screen and (max-width: 767px) {
+    .sidenav-ht{
+        height: auto;
+    }
 }

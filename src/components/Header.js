@@ -10,37 +10,37 @@ function Header(props) {
             <ul className="nav nav-pills flex-column mb-auto">
                 <li className="nav-item">
                     <a href="/home" className="nav-link text-white">
-                        Home
+                        <i className="fa fa-home"></i>&nbsp;&nbsp;Home
                     </a>
                 </li>
                 <li>
                     <a href="/add-student" className="nav-link text-white">
-                        Add New Students
+                        <i className="fa fa-graduation-cap"></i>&nbsp;&nbsp;Add New Students
                     </a>
                 </li>
                 <li>
                     <a href="/students" className="nav-link text-white">
-                        Students List
+                        <i className="fa fa-list"></i>&nbsp;&nbsp;Students List
                     </a>
                 </li>
                 <li>
                     <a href="/add-course" className="nav-link text-white">
-                        Add New Courses
+                        <i className="fa fa-book"></i>&nbsp;&nbsp;Add New Courses
                     </a>
                 </li>
                 <li>
                     <a href="/courses" className="nav-link text-white">
-                        Courses List
+                        <i className="fa fa-list"></i>&nbsp;&nbsp;Courses List
                     </a>
                 </li>
                 <li>
                     <a href="/add-result" className="nav-link text-white">
-                        Add New Results
+                        <i className="fa fa-certificate"></i>&nbsp;&nbsp;Add New Results
                     </a>
                 </li>
                 <li>
                     <a href="/results" className="nav-link text-white">
-                        Results List
+                        <i className="fa fa-list"></i>&nbsp;&nbsp;Results List
                     </a>
                 </li>
             </ul>
