@@ -21,7 +21,9 @@ function Courses(props) {
     useEffect(() => {
         // Call API to getAllCourses and update State
         axios.get(`${API}/api/course`).then(({data}) => {
-            setCourses(data);
+            console.log(data)
+            let d = data.sort((a, b) => a.course.localeCompare(b.course))
+            setCourses(d);
         })
     }, [])
 

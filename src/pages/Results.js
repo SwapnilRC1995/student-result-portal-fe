@@ -8,6 +8,11 @@ function Results(props) {
 
     useEffect(() => {
         axios.get(`${API}/api/result`).then(({data}) => {
+            data.sort((a, b) => a.course.localeCompare(b.course)).sort((a, b) => {
+                if(a.course.localeCompare(b.course) === 0){
+                    return a.score.localeCompare(b.score)
+                }
+            })
             setResults(data)
         })
     },[])

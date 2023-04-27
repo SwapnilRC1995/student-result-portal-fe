@@ -39,8 +39,12 @@ function AddStudent(props) {
             setDobError("You're not eligible")
             setNotification("")
         }
+        if(!ValidationUtils.isBlank(dob) && ValidationUtils.checkFutureDate(date)){
+            setDobError("You have entered a future date.")
+            setNotification("")
+        }
 
-        if(!ValidationUtils.isBlank(firstName) && !ValidationUtils.isBlank(familyName) && !ValidationUtils.isBlank(email) && !ValidationUtils.validateEmail(email) && ValidationUtils.isValidAge(date)){
+        if(!ValidationUtils.isBlank(firstName) && !ValidationUtils.isBlank(familyName) && !ValidationUtils.isBlank(email) && !ValidationUtils.validateEmail(email) && ValidationUtils.isValidAge(date) && !ValidationUtils.checkFutureDate(date)){
             const student = {
                 firstName: firstName,
                 familyName: familyName,
@@ -97,6 +101,7 @@ function AddStudent(props) {
                                 <label htmlFor="dob" className="form-label">Date of birth</label>
                                 <input
                                     type="date"
+                                    max={ValidationUtils.getToday()}
                                     className="form-control"
                                     id="dob"
                                     value={dob}
